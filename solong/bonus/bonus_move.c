@@ -1,16 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   move.c                                             :+:      :+:    :+:   */
+/*   bonus_move.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fekiz <fekiz@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 16:24:45 by fekiz             #+#    #+#             */
-/*   Updated: 2024/02/08 16:09:29 by fekiz            ###   ########.fr       */
+/*   Updated: 2024/02/10 17:17:21 by fekiz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "so_long_bonus.h"
+
+void	lose_control(t_game *game)
+{
+	if (game->en_cord.x == game->p_cord.x && game->p_cord.y == game->en_cord.y)
+	{
+		write (1, "You are killed by the Valkyrie!\n", 32);
+		close_game(game);
+	}
+}
 
 int	move1(int key, t_game *game)
 {
@@ -24,6 +33,7 @@ int	move1(int key, t_game *game)
 			game->exit = false;
 		}
 		game->p_cord.y--;
+		lose_control(game);
 		game->map[game->p_cord.y][game->p_cord.x] = 'P';
 		add_imgs(game);
 		if (game->e_cord.x == game->p_cord.x
@@ -47,6 +57,7 @@ int	move2(int key, t_game *game)
 			game->exit = false;
 		}
 		game->p_cord.y++;
+		lose_control(game);
 		game->map[game->p_cord.y][game->p_cord.x] = 'P';
 		if (game->e_cord.x == game->p_cord.x
 			&& game->p_cord.y == game->e_cord.y)
@@ -70,6 +81,7 @@ int	move3(int key, t_game *game)
 			game->exit = false;
 		}
 		game->p_cord.x--;
+		lose_control(game);
 		game->map[game->p_cord.y][game->p_cord.x] = 'P';
 		if (game->e_cord.x == game->p_cord.x
 			&& game->p_cord.y == game->e_cord.y)
@@ -93,6 +105,7 @@ int	move4(int key, t_game *game)
 			game->exit = false;
 		}
 		game->p_cord.x++;
+		lose_control(game);
 		game->map[game->p_cord.y][game->p_cord.x] = 'P';
 		if (game->e_cord.x == game->p_cord.x
 			&& game->p_cord.y == game->e_cord.y)

@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   locations.c                                        :+:      :+:    :+:   */
+/*   bonus_locations.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fekiz <fekiz@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 18:48:11 by fekiz             #+#    #+#             */
-/*   Updated: 2024/02/08 16:09:12 by fekiz            ###   ########.fr       */
+/*   Updated: 2024/02/10 17:15:41 by fekiz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "so_long_bonus.h"
 
 int	map_character_checker(char *mp)
 {
@@ -86,7 +86,14 @@ void	coordinats(t_game *list)
 	{
 		x = 0;
 		while (list->map[y][x] != '\0')
+		{
+			if (list->map[y][x] == 'X')
+			{
+				list->en_cord.y = y;
+				list->en_cord.x = x;
+			}
 			x++;
+		}
 		y++;
 	}
 	list->map_cord.y = y;

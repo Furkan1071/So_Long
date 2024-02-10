@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "so_long_bonus.h"
 
 void	game_edit(t_game *list)
 {
@@ -23,8 +23,11 @@ void	game_edit(t_game *list)
 	list->imgs.c = NULL;
 	list->imgs.wall = NULL;
 	list->imgs.zero = NULL;
+	list->imgs.en = NULL;
 	list->exit = false;
+	list->control = 0;
 	list->p = 0;
+	list->en = 0;
 	list->c = 0;
 	list->e = 0;
 	list->moves = 0;
