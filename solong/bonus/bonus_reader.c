@@ -25,6 +25,7 @@ void	game_edit(t_game *list)
 	list->imgs.zero = NULL;
 	list->imgs.en = NULL;
 	list->exit = false;
+	list->exit1 = false;
 	list->control = 0;
 	list->p = 0;
 	list->en = 0;

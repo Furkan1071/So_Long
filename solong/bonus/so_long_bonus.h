@@ -6,7 +6,7 @@
 /*   By: fekiz <fekiz@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 14:48:51 by fekiz             #+#    #+#             */
-/*   Updated: 2024/02/10 17:28:57 by fekiz            ###   ########.fr       */
+/*   Updated: 2024/02/11 16:13:44 by fekiz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ typedef struct game_list
 	int			en;
 	int			moves;
 	bool		exit;
+	bool		exit1;
 	t_cord		map_cord;
 	t_cord		p_cord;
 	t_cord		e_cord;
@@ -93,5 +94,6 @@ int		en_move2(t_game *game);
 int		en_move3(t_game *game);
 int		en_move4(t_game *game);
 int		en_move_controler(int x, int y, t_game *game);
+void	lose_control(t_game *game);
 
 #endif
