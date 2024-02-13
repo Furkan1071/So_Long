@@ -6,7 +6,7 @@
 /*   By: fekiz <fekiz@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 16:24:45 by fekiz             #+#    #+#             */
-/*   Updated: 2024/02/11 16:07:27 by fekiz            ###   ########.fr       */
+/*   Updated: 2024/02/13 16:53:45 by fekiz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,12 @@ int	move1(int key, t_game *game)
 		game->p_cord.y--;
 		lose_control(game);
 		game->map[game->p_cord.y][game->p_cord.x] = 'P';
-		add_imgs(game);
 		if (game->e_cord.x == game->p_cord.x
 			&& game->p_cord.y == game->e_cord.y)
 			game->exit = true;
+		mlx_clear_window(game->mlx, game->win);
+		add_imgs(game);
+		put_str(game);
 		coin_controls(game);
 		return (0);
 	}
@@ -62,7 +64,9 @@ int	move2(int key, t_game *game)
 		if (game->e_cord.x == game->p_cord.x
 			&& game->p_cord.y == game->e_cord.y)
 			game->exit = true;
+		mlx_clear_window(game->mlx, game->win);
 		add_imgs(game);
+		put_str(game);
 		coin_controls(game);
 		return (0);
 	}
@@ -86,7 +90,9 @@ int	move3(int key, t_game *game)
 		if (game->e_cord.x == game->p_cord.x
 			&& game->p_cord.y == game->e_cord.y)
 			game->exit = true;
+		mlx_clear_window(game->mlx, game->win);
 		add_imgs(game);
+		put_str(game);
 		coin_controls(game);
 		return (0);
 	}
@@ -110,7 +116,9 @@ int	move4(int key, t_game *game)
 		if (game->e_cord.x == game->p_cord.x
 			&& game->p_cord.y == game->e_cord.y)
 			game->exit = true;
+		mlx_clear_window(game->mlx, game->win);
 		add_imgs(game);
+		put_str(game);
 		coin_controls(game);
 		return (0);
 	}

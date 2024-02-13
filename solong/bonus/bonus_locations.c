@@ -6,7 +6,7 @@
 /*   By: fekiz <fekiz@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 18:48:11 by fekiz             #+#    #+#             */
-/*   Updated: 2024/02/10 17:15:41 by fekiz            ###   ########.fr       */
+/*   Updated: 2024/02/12 14:30:44 by fekiz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ void	coordinats(t_game *list)
 		x = 0;
 		while (list->map[y][x] != '\0')
 		{
-			if (list->map[y][x] == 'X')
+			if (list->map[y][x] == 'N')
 			{
 				list->en_cord.y = y;
 				list->en_cord.x = x;

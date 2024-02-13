@@ -6,7 +6,7 @@
 /*   By: fekiz <fekiz@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 14:48:51 by fekiz             #+#    #+#             */
-/*   Updated: 2024/02/11 16:13:44 by fekiz            ###   ########.fr       */
+/*   Updated: 2024/02/13 16:40:21 by fekiz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,8 @@ typedef struct game_list
 	t_cord		en_cord;
 	t_images	imgs;
 }				t_game;
+
+void	put_str(t_game *game);
 void	add_images_bonus(t_game *game);
 int		coin_check(t_game *game);
 size_t	ft_strlen(char *str);
@@ -95,5 +97,6 @@ int		en_move3(t_game *game);
 int		en_move4(t_game *game);
 int		en_move_controler(int x, int y, t_game *game);
 void	lose_control(t_game *game);
+char	*ft_itoa(int num);
 
 #endif

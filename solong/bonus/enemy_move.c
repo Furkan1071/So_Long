@@ -6,7 +6,7 @@
 /*   By: fekiz <fekiz@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 16:46:38 by fekiz             #+#    #+#             */
-/*   Updated: 2024/02/11 16:14:24 by fekiz            ###   ########.fr       */
+/*   Updated: 2024/02/12 20:09:23 by fekiz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ int	en_move1(t_game *game)
 		}
 		game->en_cord.y--;
 		lose_control(game);
-		game->map[game->en_cord.y][game->en_cord.x] = 'X';
+		game->map[game->en_cord.y][game->en_cord.x] = 'N';
+		add_imgs(game);
 		if (game->e_cord.x == game->en_cord.x
 			&& game->en_cord.y == game->e_cord.y)
 			game->exit1 = true;
-		add_imgs(game);
 		coin_controls(game);
 		return (0);
 	}
@@ -47,11 +47,11 @@ int	en_move2(t_game *game)
 		}
 		game->en_cord.y++;
 		lose_control(game);
-		game->map[game->en_cord.y][game->en_cord.x] = 'X';
+		game->map[game->en_cord.y][game->en_cord.x] = 'N';
+		add_imgs(game);
 		if (game->e_cord.x == game->en_cord.x
 			&& game->en_cord.y == game->e_cord.y)
 			game->exit1 = true;
-		add_imgs(game);
 		coin_controls(game);
 		return (0);
 	}
@@ -70,11 +70,11 @@ int	en_move3(t_game *game)
 		}
 		game->en_cord.x--;
 		lose_control(game);
-		game->map[game->en_cord.y][game->en_cord.x] = 'X';
+		game->map[game->en_cord.y][game->en_cord.x] = 'N';
+		add_imgs(game);
 		if (game->e_cord.x == game->en_cord.x
 			&& game->en_cord.y == game->e_cord.y)
 			game->exit1 = true;
-		add_imgs(game);
 		coin_controls(game);
 		return (0);
 	}
@@ -93,11 +93,11 @@ int	en_move4(t_game *game)
 		}
 		game->en_cord.x++;
 		lose_control(game);
-		game->map[game->en_cord.y][game->en_cord.x] = 'X';
+		game->map[game->en_cord.y][game->en_cord.x] = 'N';
+		add_imgs(game);
 		if (game->e_cord.x == game->en_cord.x
 			&& game->en_cord.y == game->e_cord.y)
 			game->exit1 = true;
-		add_imgs(game);
 		coin_controls(game);
 		return (0);
 	}

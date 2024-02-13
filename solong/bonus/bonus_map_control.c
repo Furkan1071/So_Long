@@ -6,7 +6,7 @@
 /*   By: fekiz <fekiz@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 14:50:27 by fekiz             #+#    #+#             */
-/*   Updated: 2024/02/10 17:17:52 by fekiz            ###   ########.fr       */
+/*   Updated: 2024/02/12 14:30:30 by fekiz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,13 +64,13 @@ int	map_controller(char *mp, t_game *list)
 			list->p++;
 		else if (mp[i] == 'E')
 			list->e++;
-		else if (mp[i] == 'X')
+		else if (mp[i] == 'N')
 			list->en++;
 	}
 	i = 0;
 	while (mp[i])
 	{
-		if (mp[i] != 'E' && mp[i] != 'C' && mp[i] != 'P' && mp[i] != 'X'
+		if (mp[i] != 'E' && mp[i] != 'C' && mp[i] != 'P' && mp[i] != 'N'
 			&& mp[i] != '1' && mp[i] != '0' && mp[i] != '\n')
 			return (1);
 		i++;

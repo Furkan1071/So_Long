@@ -6,7 +6,7 @@
 /*   By: fekiz <fekiz@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 14:51:11 by fekiz             #+#    #+#             */
-/*   Updated: 2024/02/11 16:07:44 by fekiz            ###   ########.fr       */
+/*   Updated: 2024/02/13 16:40:14 by fekiz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,6 @@
 
 int	move_controler(int x, int y, t_game *game)
 {
-	game->moves++;
-	write (1, "moves: ", 7);
-	ft_putnbr(game->moves);
-	write (1, "\n", 1);
 	if (game->map[y][x] == '1')
 		return (0);
 	return (1);

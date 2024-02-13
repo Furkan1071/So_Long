@@ -15,19 +15,18 @@ OBJS= $(SRCS:.c=.o)
 MINI = ./mlx/libmlx.a
 
 B_NAME = so_long_bonus
-BONUS_SRCS_DIR = ./bonus/
-BSRCS =	$(addprefix $(BONUS_SRCS_DIR),\
-		bonus_finish.c		\
- 		bonus_ft_split.c		\
-		bonus_game.c			\
-		bonus_locations.c		\
-		bonus_main.c			\
-		bonus_map_control.c	\
-		bonus_map_control2.c	\
-		bonus_map.c			\
-		bonus_move.c			\
-		bonus_reader.c		\
-		enemy_move.c)
+BSRCS =	./bonus/bonus_finish.c		\
+ 		./bonus/bonus_ft_split.c		\
+		./bonus/bonus_game.c			\
+		./bonus/bonus_locations.c		\
+		./bonus/bonus_main.c			\
+		./bonus/bonus_map_control.c	\
+		./bonus/bonus_map_control2.c	\
+		./bonus/bonus_map.c			\
+		./bonus/bonus_move.c			\
+		./bonus/bonus_reader.c		\
+		./bonus/enemy_move.c			\
+		./bonus/ft_itoa.c
 BOBJS = $(BSRCS:.c=.o)
 
 all: ${NAME}

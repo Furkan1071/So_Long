@@ -6,7 +6,7 @@
 /*   By: fekiz <fekiz@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 19:42:47 by fekiz             #+#    #+#             */
-/*   Updated: 2024/02/10 17:17:04 by fekiz            ###   ########.fr       */
+/*   Updated: 2024/02/13 16:50:32 by fekiz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ static void	add_image(t_game *game, char c, int x, int y)
 		mlx_put_image_to_window(game->mlx, game->win, game->imgs.c, x, y);
 	if (c == 'E')
 		mlx_put_image_to_window(game->mlx, game->win, game->imgs.e, x, y);
-	if (c == 'X')
+	if (c == 'N')
 		mlx_put_image_to_window(game->mlx, game->win, game->imgs.en, x, y);
 }
 
